@@ -242,12 +242,21 @@ function App() {
         timestamp: Date.now()
       };
       setResults(prev => [...prev, newResult]);
-      setIsSecretModalOpen(false);
-      setIsSidePanelOpen(true);
     } catch (e) {
       console.error(e);
+      // Show error in the results panel
+      const errorResult: CalculationResult = {
+        id: Date.now().toString(),
+        type: 'advanced',
+        input: 'System Message',
+        output: "Failed to connect to the intelligent engine. Please check your network or API configuration.",
+        timestamp: Date.now()
+      };
+      setResults(prev => [...prev, errorResult]);
     } finally {
       setIsProcessing(false);
+      setIsSecretModalOpen(false);
+      setIsSidePanelOpen(true);
     }
   };
 
