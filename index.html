@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SciCalc Pro | Advanced Online Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+            colors: {
+              calc: {
+                body: '#f0f2f5',
+                screen: '#263238',
+                btn: '#fcfcfc',
+                btnHover: '#f0f0f0',
+                btnDark: '#e0e0e0',
+                btnDarkHover: '#d0d0d0',
+                btnBlue: '#3b82f6',
+                btnBlueHover: '#2563eb',
+                textMain: '#1f2937',
+              }
+            },
+            boxShadow: {
+              'key': '0 2px 0px 0px rgba(0,0,0,0.15)',
+              'key-active': 'inset 0 2px 4px 0 rgba(0,0,0,0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+        "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+    <div id="root"></div>
+  </body>
+</html>
